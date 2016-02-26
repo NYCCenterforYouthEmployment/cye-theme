@@ -1,0 +1,32 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$brand-primary:         #27ae60;
+
+//Montserrat Normal 400 and Bold 700, Roboto 100 (thin)
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:100);
+
+// Fonts
+$font-header: 			'Montserrat', sans-serif;
+$font-body:             'Helvetica Nue', Helvetica, Arial, sans-serif;
+$font-stats:            'Roboto', sans-serif;
+
+
+//Colors
+$black:                 #333333;
+$white:                 #FFFFFF;
+$grey:                  #F0F0F0;
+$light-grey:            #A5A5A5;
+$med-grey:              #B2B2B2;
+$footer-grey:           #E3E2E2;
+$dark-grey:             #565354;
+$yellow:                #FFCE23;
+$green:                 #90c237;
+$blue:                  #0097E2;
+$overlay-blue:          #3D5C6A;
+$overlay-blue-rgba:     rgba(61, 92, 109, .95);

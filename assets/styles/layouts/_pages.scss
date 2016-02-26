@@ -1,0 +1,189 @@
+
+
+//Homepage
+.home {
+	background:$grey;
+	
+	.gridder {
+		
+		/*background:$white;*/
+		margin:3.125em 0;
+		
+		.callout {
+			background-repeat:no-repeat;
+			&.right {
+				background-position:150% 0;
+			}
+			&.left {
+				background-position:-50% 0;
+			}
+			@media (max-width: $screen-handheld-min) {
+				background-image:none !important;
+			}
+		}
+		.callout-copy {
+			padding:3em 2em;
+			background:$white;
+			h2 {
+				margin-bottom:2em;
+				margin-top:0;
+			}
+		}
+		.callout-image {
+			@include hide-text;
+		}
+		.button {
+			@include transition;
+			display:inline-block;
+		}
+		
+		.callout-copy {
+			text-align:center;
+		}
+		
+	}
+	
+	.twitter {
+		background:$white;
+		
+		.follow {
+			margin-bottom:40px;
+		}
+		
+		.container {
+			padding-top:60px;
+			padding-bottom:60px;
+		}
+		.divider {
+			height:5px;
+			width:50%;
+			background:$blue;
+			margin-bottom:30px;
+		}
+		h2 {
+			margin-top:40px;
+			@media (max-width: $screen-tablet-min) {
+				margin-top:0;
+			}
+		}
+		.widget {
+			h3 {
+				@extend h2;
+			}
+			ul {
+				@extend .inline-list;
+				
+				li {
+					
+					width:50%;
+					
+					@media (max-width: $screen-handheld-min) {
+						width:100%;
+					}
+					.tweet-text {
+						display:block;
+						padding-right:30px;
+					}	
+				}
+			}
+		}
+	}
+	.partners {
+		background:$grey;
+		text-align:center;
+		padding-top:40px;
+		padding-bottom:40px;	
+		
+		h3 {
+			font-weight:400;
+			text-transform:uppercase;
+		}
+		
+		ul {
+			@extend .inline-list;
+			li {
+				a {
+					opacity:0.5;
+					@include transition;
+					&:hover {
+						opacity:1;
+					}
+				}
+			}
+		}
+	}
+}
+
+.partners {
+}
+
+
+//Tstimonials page (also appears on homepage)
+
+.home .testimonials {
+	.item {
+		width:100%;
+		margin-top:0;
+	}
+}
+.testimonials {
+		
+	.item {
+		margin-top:60px;
+		width:33%;
+		display: inline-block;
+		@media (max-width: $screen-tablet-min) {
+			width:50%;
+		}
+		@media (max-width: $screen-handheld-min) {
+			width:100%;
+		}
+		vertical-align: top;
+		padding:0 15px;
+		@media (max-width: $screen-tablet-min) {
+			padding:3.125em 15px;
+		}
+		text-align:center;
+		img {
+			-webkit-border-radius:50%;
+			border-radius: 50%;
+		}
+		.name {
+			margin-top:1em;
+		}
+		.name, .title {
+			h2, h3 {
+				margin:0;
+			}
+		}
+	}
+}
+
+
+//Impact and Benefits & Testimonials Nave
+ul#menu-impact-benefits {
+	@extend .inline-list;
+	li {
+		padding:0 15px 15px 0;
+		a {
+			color:$med-grey;
+			font-family:$font-header;
+			font-weight:400;
+			padding:0;
+			
+			&:hover {
+				background:none;
+			}
+		}
+		&.current_page_item {
+			a {
+				color:$black;
+			}
+		}
+	}
+}
+
+//Impacts and benefits page
+.impact-and-benefits {
+	
+}

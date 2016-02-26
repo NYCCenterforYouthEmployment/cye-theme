@@ -1,0 +1,349 @@
+
+//Homepage banner
+header.banner {
+	
+	border-bottom:1px solid $grey;
+	padding-bottom:20px;
+	background-color:$white;
+	
+	.brand {
+		position:absolute;
+		margin-left:60px;
+		margin-top:19px;
+		font-family:$font-header;
+		font-weight:400;
+		text-transform:uppercase;
+		font-size:0.9em;
+		line-height:1em;
+		width:180px;
+		z-index:999;
+		
+		a {
+			color:$black;
+			text-decoration:none;
+		}
+	}
+	
+	&.home {
+		border-bottom:none;
+		padding-bottom:0;
+		background-color:transparent;
+		
+		background-size:cover;
+		background-position:top center;
+		position:relative;
+		z-index:700;
+		
+		.brand {
+			display:none;
+		}
+	
+		.scrim {
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+50,000000+100&0.5+0,0.1+50,0.5+100 */
+			background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
+	
+			@include hide-text;
+	
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index:701;
+		}
+	
+		.hero-content-wrapper {
+			color:$white;
+			font-family:$font-header;
+			text-align:center;
+			z-index:702;
+			position:relative;
+			max-width:72.6%;
+			margin:15% auto;
+			
+			.site-title {
+				font-weight:700;
+				text-transform:uppercase;
+				font-size:3.75em;
+				line-height:1em;
+			}
+			.site-subtitle {
+				font-weight:400;
+				font-size:1.875em;
+			}
+			
+			.call-to-action-buttons {
+				margin:10% auto;
+				.button-left, .button-right {
+					display:inline-block;
+					margin:15px;
+					a {
+						@include transition;
+						@include white-button;
+					}
+				}
+			}
+			
+			@media (max-width: $screen-tablet-min) {
+				font-size: 80%;
+				max-width:100%;
+			}
+			@media (max-width: $screen-handheld-min) {
+				font-size: 50%;
+			}
+		}
+		.credit {
+			color:$white;
+			font-size:14px;
+			text-align:right;
+			position:relative;
+			z-index:906;
+			padding-bottom:30px;
+			
+			@media (max-width: $screen-handheld-min) {
+				text-align:center;
+				font-size:11px;
+			}
+		}
+	}
+	
+	
+}
+
+//Navigation
+.home #menulink .hamburger-wrapper .hamburger {
+	color:$white;
+}
+#menulink {
+	float:left;
+	.hamburger-wrapper {
+		padding: 0;
+		position: relative;
+		top: 15px;
+		left: 0;
+		z-index: 999;
+		
+		.hamburger {
+			font-size:2.2em;
+			color:$black;
+		}
+	}
+}
+
+.nav-primary {
+	
+	background: $overlay-blue;
+	background: $overlay-blue-rgba;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 900;
+	
+	display:none;
+	
+	
+	.nav-primary-wrapper {
+		/*display: flex;
+		justify-content: center;
+		flex-direction: column;
+		height:100%;*/
+		padding-top:200px;
+	}
+	
+	.menu-primary-navigation-left-container {
+		width:50%;
+		float:left;
+		border-right: 2px solid $white;
+		text-align:right;
+	}
+	.menu-primary-navigation-right-container {
+		width:50%;
+		float:left;
+		ul li a {
+			text-align:left;
+		}
+	}
+	
+	
+	
+	li {
+		list-style: none;
+		transition: all ease .6s;
+		margin: 50px 0;
+		padding-bottom:10px;
+		
+		&.small-padding {
+			margin: 0;
+		}
+		
+		a {
+			color:$white;
+			font-size:24px;
+			font-family:$font-header;
+			font-weight:400;
+			text-transform:uppercase;
+			padding:0 10%;
+			
+			
+			-moz-transition: all ease .3s;
+			-webkit-transition: all ease .3s;
+			-ms-transition: all ease .3s;
+			-o-transition: all ease .3s;
+			transition: all ease .3s;
+			
+			&:hover, &:focus, &:active {
+				background:none;
+			}
+		}
+	}
+	
+}
+
+.home .nav-supplemental {
+	ul {
+		li {
+			a {
+				color:$white;
+				border-color:$white;
+			}
+		}
+	}
+}
+.nav-supplemental {
+	position:relative;
+	z-index:910;
+	text-align:right;
+	margin-top:13px;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		
+		li {
+			display:inline-block;
+			margin-left:15px;
+			a {
+				display: block;
+				color:$black;
+				text-decoration:none;
+				border:2px solid $black;
+				font-family:$font-header;
+				text-decoration:none;
+				text-transform:uppercase;
+				font-weight:400;
+				padding:8px 20px;
+				@include transition;
+				
+				&:hover {
+					background:$black;
+					border-color:$black;
+					color:$white;
+				}
+			}
+			&:last-child {
+				a {
+					border-color:$green;
+					background:$green;
+					color:$white;
+					&:hover {
+						background:$black;
+						border-color:$black
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: $screen-handheld-min) {
+		font-size:85%;
+	}
+}
+
+.show-menu {
+	display: block;
+}
+
+//Impact and benefits section
+.home .impact-and-benefits {
+	background:$yellow;
+	.impact-and-benefits-content {
+		padding-left:15px;
+		padding-right:15px;
+	}
+}
+.impact-and-benefits {
+
+	&.row {
+		margin:0;
+	}
+	
+	.impact-and-benefits-content {
+		max-width:$screen-wide-min;
+		margin:0 auto;
+		padding:3.125em 0;
+		
+		
+		h2 {
+			margin:0;
+		}
+		.button {
+			@include transition;
+			background:$black;
+			display:inline-block;
+			font-size:0.875em;
+		}
+		
+		.stats {
+			@extend .inline-list;
+			li {
+				display:inline-block;
+				vertical-align:top;
+				width:33%;
+				margin-bottom:40px;
+			}
+			.divider {
+				width:50%;
+				height:5px;
+				background:$black;
+			}
+			.statistic {
+				font-size:7.5em;
+				font-family:$font-stats;
+				font-weight:100;
+				
+			}
+			
+			.statistic_description {
+				p {
+					margin:0;
+					display:block;
+					padding-right:30px;
+				}
+			}
+			.source {
+				font-size:10px;
+				margin-top:2em;
+			}
+			@media (max-width: $screen-desktop-min) {
+				font-size:75%;
+			}
+			@media (max-width: $screen-tablet-min) {
+				font-size:50%;
+				margin-top:30px;
+			}
+			@media (max-width: $screen-handheld-min) {
+				li {
+					width:100%;
+					margin-bottom:40px;
+					p {
+						padding-right:0;
+					}
+				}
+			}
+		}
+	}
+}
