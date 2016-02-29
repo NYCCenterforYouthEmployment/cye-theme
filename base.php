@@ -15,6 +15,7 @@ use Roots\Sage\Wrapper;
       </div>
     <![endif]-->
     <?php
+	  $content_wrapper = "";
       do_action('get_header');
       if ( is_page_template( 'home.php' ) ) {
 	  	get_template_part('templates/header-home');
