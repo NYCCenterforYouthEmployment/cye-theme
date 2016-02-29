@@ -87,33 +87,34 @@
 			}
 		}
 	}
-	.partners {
-		background:$grey;
-		text-align:center;
-		padding-top:40px;
-		padding-bottom:40px;	
+}
+
+.home .partners {
+	background:$grey;
+	text-align:center;
+	padding-top:40px;
+	padding-bottom:40px;	
+}
+.partners {
 		
-		h3 {
-			font-weight:400;
-			text-transform:uppercase;
-		}
-		
-		ul {
-			@extend .inline-list;
-			li {
-				a {
-					opacity:0.5;
-					@include transition;
-					&:hover {
-						opacity:1;
-					}
+	h3 {
+		font-weight:400;
+		text-transform:uppercase;
+	}
+	
+	ul.partner-listing {
+		@extend .inline-list;
+		li {
+			border:1px solid $grey;
+			a {
+				opacity:0.5;
+				@include transition;
+				&:hover {
+					opacity:1;
 				}
 			}
 		}
 	}
-}
-
-.partners {
 }
 
 
@@ -183,7 +184,3 @@ ul.subnav {
 	}
 }
 
-//Impacts and benefits page
-.impact-and-benefits {
-	
-}
