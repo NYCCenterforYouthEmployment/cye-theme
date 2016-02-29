@@ -1,4 +1,4 @@
-<header class="banner navbar-fixed-top" <?php if (is_user_logged_in()): echo "style=\"top:45px\""; endif; ?>>
+<header class="banner navbar-fixed-top" <?php if (is_user_logged_in()): echo "style=\"top:30px\""; endif; ?>>
  
   <?php get_template_part('templates/nav-nyc'); ?>
   <div class="container clearfix">
