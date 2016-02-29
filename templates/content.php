@@ -2,7 +2,6 @@
     <article <?php post_class(); ?>>
         <header>
             <h2 class="entry-title"><?php the_title(); ?></h2>
-            <?php //get_template_part('templates/entry-meta'); ?>
         </header>
         <div class="read-more">
             <?php
@@ -10,8 +9,16 @@
 			if (empty($link)): 
 				$link = get_permalink();
 			endif;
+			
+            $external_url_source = get_field('external_url_source'); 
+			if (!empty($external_url_source)):
+            	echo $external_url_source;
+				echo "<br>";
+			endif;
+				get_template_part('templates/entry-meta');
 			?>
-            	<a href="<?php echo $link; ?>" class="button"><?php _e( 'Read', 'sage' ); ?></a>
+			
+				<p><a href="<?php echo $link; ?>" class="button"><?php _e( 'Read', 'sage' ); ?></a></p>
         </div>
         <!--
         <div class="entry-summary">
