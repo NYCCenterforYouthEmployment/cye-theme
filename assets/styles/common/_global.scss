@@ -151,8 +151,10 @@ ul, ol {
 	border:none;
 }
 .page-content,
+.post-content,
 article .entry-content,
-section.comments {
+section.comments,
+.prev-next-posts {
 	width:55%;
 	margin:0 auto;
 	@media (max-width: $screen-tablet-min) {

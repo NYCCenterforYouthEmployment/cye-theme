@@ -9,28 +9,43 @@
      <?php get_template_part('templates/subnav'); ?> 
      <?php get_template_part('templates/content' , 'page'); ?>
      
-     <?php $args = array(
-		'posts_per_page'   => 5,
-		'offset'           => 0,
-		'category'         => '',
-		'category_name'    => '',
-		'orderby'          => 'date',
-		'order'            => 'DESC',
-		'include'          => '',
-		'exclude'          => '',
-		'meta_key'         => '',
-		'meta_value'       => '',
-		'post_type'        => 'post',
-		'post_mime_type'   => '',
-		'post_parent'      => '',
-		'author'	   		   => '',
-		'post_status'      => 'publish',
-		'suppress_filters' => true 
+     
+	 <?php
+	$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+	$args = array( 
+		'posts_per_page' 	=> 10,
+		'post_type' 			=> 'post',
+		'orderby'			=> 'date',
+		'order'				=> 'DESC',
+		'paged' 				=> $paged
+		
 	);
-	$posts = get_posts( $args );
-    foreach ( $posts as $post ) : setup_postdata( $post );
-		get_template_part('templates/content');
-	endforeach; 
-	wp_reset_postdata();?>
+	// The Query
+	$the_query = new WP_Query( $args );
+	
+	// The Loop
+	if ( $the_query->have_posts() ) {
+		while ( $the_query->have_posts() ) {
+			$the_query->the_post();
+			get_template_part('templates/content');
+		} 
+		
+		?>
+		<?php if ($the_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
+              <nav class="prev-next-posts clearfix">
+                <div class="prev-posts-link">
+                  <?php echo get_next_posts_link( 'Older Entries', $the_query->max_num_pages ); // display older posts link ?>
+                </div>
+                <div class="next-posts-link">
+                  <?php echo get_previous_posts_link( 'Newer Entries' ); // display newer posts link ?>
+                </div>
+              </nav>
+		<?php } ?>
+	<?php
+	} else {
+		// no posts found
+	}
+	
+	?>
      
  <?php endwhile; ?>
