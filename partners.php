@@ -12,6 +12,6 @@
  
  <?php 
  //print the testimonials that exist
- $partners_page_id = $post->ID;
- include(locate_template('templates/content-partners.php'));
+ //$partners_page_id = $post->ID;
+ //include(locate_template('templates/content-partners.php'));
  ?>
