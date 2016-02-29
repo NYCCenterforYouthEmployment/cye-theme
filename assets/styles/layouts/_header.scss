@@ -353,3 +353,16 @@ header.banner {
 		}
 	}
 }
+
+.agency-header {
+	@media (max-width: $screen-handheld-min) {
+		.upper-header-black-title,
+		.header-divider {
+			display:none;
+		}
+		.small-nyc-logo {
+			margin-top:4px !important;
+		}
+	}
+	
+}
