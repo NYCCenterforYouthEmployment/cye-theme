@@ -8,7 +8,7 @@
             <?php
 			$link = get_field('external_url'); 
 			if (empty($link)): 
-				$link = the_permalink();
+				$link = get_permalink();
 			endif;
 			?>
             	<a href="<?php echo $link; ?>" class="button"><?php _e( 'Read', 'sage' ); ?></a>
