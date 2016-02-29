@@ -1,12 +1,12 @@
 <div class="testimonials">
-	<div class="item">
 	 <?php 
         $testimonials = get_field('testimonials',$testimonials_page_id);
         if($testimonials){
             shuffle( $testimonials );
             foreach($testimonials as $testimonial) {
                 $testimonial_headshot = $testimonial['headshot'];
-                if( !empty($testimonial_headshot) ):
+                echo "<div class=\"item\">";
+				if( !empty($testimonial_headshot) ):
                     $url = $testimonial_headshot['url'];
                     $title = $testimonial_headshot['title'];
                     $alt = $testimonial_headshot['alt'];
@@ -48,9 +48,11 @@
                  //otherwise, keep going
                  if ( is_page_template( 'home.php' ) ) {
                     break;
-                 }	 
+                 }
+				 
+				 //close item
+				 echo "</div>";	 
            }
        }
     ?>
-  </div>
 </div>
