@@ -73,16 +73,20 @@ header.banner {
 			.site-subtitle {
 				font-weight:400;
 				font-size:1.875em;
+				line-height:1.2em;
+				margin-top:15px;
 			}
 			
 			.call-to-action-buttons {
-				margin:10% auto;
+				margin:5% auto;
 				.button-left, .button-right {
 					display:inline-block;
 					margin:15px;
 					a {
 						@include transition;
 						@include white-button;
+						padding:1.11em 30px;
+						font-size:1.125em;
 					}
 				}
 			}
@@ -260,6 +264,9 @@ header.banner {
 	}
 	@media (max-width: $screen-handheld-min) {
 		font-size:85%;
+		li:first-child {
+			display:none;
+		}
 	}
 }
 
@@ -306,8 +313,7 @@ header.banner {
 				margin-bottom:40px;
 			}
 			.divider {
-				width:50%;
-				height:5px;
+				@extend .divider;
 				background:$black;
 			}
 			.statistic {

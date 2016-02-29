@@ -55,8 +55,7 @@
 			padding-bottom:60px;
 		}
 		.divider {
-			height:5px;
-			width:50%;
+			@extend .divider;
 			background:$blue;
 			margin-bottom:30px;
 		}
@@ -135,6 +134,7 @@
 		@media (max-width: $screen-tablet-min) {
 			width:50%;
 		}
+		
 		@media (max-width: $screen-handheld-min) {
 			width:100%;
 		}

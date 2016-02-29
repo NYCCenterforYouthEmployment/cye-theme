@@ -14,6 +14,7 @@
   <div class="scrim">
   	<?php if( $hero_images && $hero_image_alt ): ?><?php echo $hero_image_alt; ?><?php endif; ?>
   </div>
+  <?php get_template_part('templates/nav-nyc'); ?>
   <div class="container">
     <?php get_template_part('templates/nav'); ?>
     <div class="hero-content-wrapper">

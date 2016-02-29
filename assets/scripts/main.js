@@ -42,7 +42,14 @@
 		//Sticky footer
         //http://blog.mojotech.com/responsive-dynamic-height-sticky-footers/
         var bumpIt = function() {
-          $('body').css('margin-bottom', $('footer.content-info').height()+200);
+          //on homepage add less margin since we have no fixed header there
+		  var margin_offset;
+		  if ($('body').hasClass('home')) {
+			  margin_offset = 110;
+		  } else {
+			   margin_offset = 200;
+		  }
+		  $('body').css('margin-bottom', $('footer.content-info').height()+parseInt(margin_offset));
 		  
         },
         didResize = false;
