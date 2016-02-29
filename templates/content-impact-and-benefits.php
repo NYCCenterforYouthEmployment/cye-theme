@@ -5,7 +5,7 @@
 				<li>
                 <h2><?php echo get_the_title($impact_benefits_page_id); ?></h2>
 				<p style="padding-right:15px;"><?php echo get_field('impact_and_benfits_subtitle',$impact_benefits_page_id); ?></p>
-				<a href="<?php echo esc_url( get_permalink($impact_benefits_page_id) ); ?>" class="button"><?php _e( 'Get more facts', 'sage' ); ?></a>
+				<a href="<?php echo get_field('get_more_facts_link'); ?>" class="button"><?php _e( 'Get more facts', 'sage' ); ?></a>
                 </li>
             <?php endif; ?>
        		

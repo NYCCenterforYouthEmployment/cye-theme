@@ -29,7 +29,7 @@
             <?php endif; ?>
             <?php if( get_field('button_right_label') ): ?>
             <div class="button-right">
-            	<a href="<?php echo get_field('button_left_link'); ?>"><?php echo get_field('button_right_label'); ?></a>
+            	<a href="<?php echo get_field('button_right_link'); ?>"><?php echo get_field('button_right_label'); ?></a>
             </div>
             <?php endif; ?>
         </div>
