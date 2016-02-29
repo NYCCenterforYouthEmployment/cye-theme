@@ -67,3 +67,4 @@ function register_shortcodes(){
    add_shortcode('donate-form', 'donate_function');
 }
 add_action( 'init', 'register_shortcodes');
+
