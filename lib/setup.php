@@ -30,7 +30,6 @@ function setup() {
     'primary_navigation_right' => __('Primary Navigation Right', 'sage'),
 	'primary_navigation_left' => __('Primary Navigation Left', 'sage'),
 	'supplemental_navigation' => __('Supplemental Navigation', 'sage'),
-	'impact_benefits' => __('Impact & Benefits Subnav', 'sage'),
 	'footer_navigation' => __('Footer Navigation', 'sage')
   ]);
 
