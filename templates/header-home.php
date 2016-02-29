@@ -1,6 +1,7 @@
 <?php $hero_images= get_field('homepage_hero_gallery'); ?>
 <?php 
 	if ($hero_images):
+		shuffle( $hero_images );
 		foreach( $hero_images as $image ): 
 			$hero_image_url = $image['sizes']['large'];
 			$hero_image_alt = $image['alt'];
