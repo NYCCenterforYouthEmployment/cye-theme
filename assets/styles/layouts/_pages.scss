@@ -15,7 +15,7 @@
 				background-position:150% center;
 			}
 			&.left {
-				background-position:-50% center;
+				background-position:center;
 			}
 			@media (max-width: $screen-handheld-min) {
 				background-image:none !important;
