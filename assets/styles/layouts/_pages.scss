@@ -12,10 +12,10 @@
 		.callout {
 			background-repeat:no-repeat;
 			&.right {
-				background-position:150% 0;
+				background-position:150% center;
 			}
 			&.left {
-				background-position:-50% 0;
+				background-position:-50% center;
 			}
 			@media (max-width: $screen-handheld-min) {
 				background-image:none !important;
