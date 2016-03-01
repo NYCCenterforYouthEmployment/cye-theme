@@ -32,13 +32,8 @@ input[type="number"],
 .frm_style_formidable-style.with_frm_style .frm_repeat_sec {
 	margin-bottom:20px !important;
 }
-.frm_icon_font.frm_plus_icon,
-.frm_icon_font.frm_minus_icon {
-	display:none !important;
-}
-
 .with_frm_style .frm_message {
-	margin-top:35px;
+	margin-top:35px !important;
 	p {
 		margin-top:0 !important;
 		margin-bottom:0 !important;

@@ -53,10 +53,10 @@ function donate_function() {
 <input type="hidden" value="HTML" name="ssl_result_format">
 <input type="hidden" value="http://www1.nyc.gov/site/fund/about/about.page" name="ssl_receipt_link_url">
 <div class="row">
-<div class="col-sm-4" style="padding-top:12px;">
+<div class="col-sm-3" style="padding-top:12px;">
 <label for="donation_amount">I am donating: $ </label>
 </div>
-<div class="col-sm-8">
+<div class="col-sm-9">
 <input type="number" class="donation-amount" value="" min="5" name="ssl_amount" id="donation_amount">
 <p><input type="submit" value="Submit" class="button"></p>
 </div></div>
