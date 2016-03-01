@@ -47,6 +47,7 @@ class Twitter_Widget extends WP_Widget {
          <a href="https://twitter.com/<?php echo $instance['username']; ?>" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @<?php echo $instance['username']; ?></a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 		<?php
 		echo '</div>';
+		//echo '<span>'.$instance['hashtags'].'</span>';
 		$result = $this->getTweets($instance['username'], $instance['count'], $instance['hashtags']);
 		
 		echo '<div class="col-md-8">';
@@ -54,6 +55,7 @@ class Twitter_Widget extends WP_Widget {
 		
 		$counter=0;
 		$max_tweets=$instance['count'];
+		//var_dump($result);
 		if( $result && is_array($result) ) {
 			foreach( $result as $tweet ) {
 				$text = $this->linkify($tweet['text']);
@@ -69,7 +71,7 @@ class Twitter_Widget extends WP_Widget {
 				}
 			}
 		} else {
-			echo '<li>' . __('There was an error grabbing the Twitter feed', 'sage') . '</li>';
+			echo '<li>' . __('There was an error processing the Twitter feed.', 'sage') . '</li>';
 		}
 
 		echo '</ul>';
@@ -227,8 +229,9 @@ class Twitter_Widget extends WP_Widget {
 		
 		//search options array
 		$search_options = array(
-			'q' => urlencode('from:'.$config['username'].' '.$config['hashtags'])
-			//'count' => $config['count']
+			//'q' => urlencode('from:'.$config['username'].' '.$config['hashtags'])
+			//'q' => '%23YouthWorkforce+from:NYCMayorsFund'
+			'q' => '%23'.str_replace(' ','+',$config['hashtags']).'+from:'.$config['username'].''
 		);
 		
 		$connection = new TwitterOAuth($config['consumer_key'], $config['consumer_key_secret'], $config['access_token'], $config['access_token_secret']);

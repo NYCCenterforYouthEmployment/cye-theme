@@ -23,14 +23,20 @@
     	<div class="site-subtitle"><?php echo get_field('hero_subtitle'); ?></div>
         
         <div class="call-to-action-buttons clearfix">
-        	<?php if( get_field('button_left_label') ): ?>
+        	<?php 
+				$button_left_label = get_field('button_left_label');
+				$button_left_link = get_field('button_left_link');
+				if( $button_left_link && $button_left_label ): ?>
                 <div class="button-left">
-                    <a href="<?php echo get_field('button_left_link'); ?>"><?php echo get_field('button_left_label'); ?></a>
+                    <a href="<?php echo get_field('button_left_link'); ?>" onclick="ga('send','event','button','<?php echo $button_left_label; ?>','CYE Website')"><?php echo $button_left_label; ?></a>
                 </div>
             <?php endif; ?>
-            <?php if( get_field('button_right_label') ): ?>
+            <?php 
+			$button_right_label = get_field('button_right_label');
+			$button_right_link = get_field('button_right_link');
+			if( $button_right_link && $button_right_label ): ?>
             <div class="button-right">
-            	<a href="<?php echo get_field('button_right_link'); ?>"><?php echo get_field('button_right_label'); ?></a>
+            	<a href="<?php echo $button_right_link; ?>" onclick="ga('send','event','button','<?php echo $button_right_label; ?>','CYE Website')"><?php echo $button_right_label; ?></a>
             </div>
             <?php endif; ?>
         </div>
