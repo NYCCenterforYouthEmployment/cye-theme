@@ -13,5 +13,4 @@
  //print the testimonials that exist
  $testimonials_page_id = $post->ID;
  include(locate_template('templates/content-testimonials.php'));
- 
  ?>

@@ -63,7 +63,53 @@ function donate_function() {
 </form>';
 	return $donate_form;
 }
+
+//register the shortcode for the documents
+function docs_function() {
+	global $post;
+   	$docs = get_field('documents',$post->ID);
+	$output="";
+	if( $docs ): 
+		foreach( $docs as $doc ):
+			$doc_params = $doc['document_file'];
+			// vars
+			$url = $doc_params['url'];
+			$title = $doc_params['title'];
+			$caption = $doc_params['caption'];
+			
+			$output = '<i class="fa fa-file-text-o"></i>';
+			
+		endforeach;
+	endif;
+	return $output; 
+}
+
+
 function register_shortcodes(){
    add_shortcode('donate-form', 'donate_function');
+   add_shortcode('docs', 'docs_function');
 }
 add_action( 'init', 'register_shortcodes');
+
+//change the default WP login screen logo
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login {
+			width:50%;
+		}
+		.login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo_en.png);
+            padding-bottom: 30px;
+			background-size:100% auto;
+			width:340px;
+			height:45px;
+        }
+		@media (max-width: 768px) {
+		  #login { width:100%;}
+		  .login h1 a {
+		  	width:240px;
+		  }
+		}
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
