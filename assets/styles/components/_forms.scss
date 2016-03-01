@@ -36,3 +36,11 @@ input[type="number"],
 .frm_icon_font.frm_minus_icon {
 	display:none !important;
 }
+
+.with_frm_style .frm_message {
+	margin-top:35px;
+	p {
+		margin-top:0 !important;
+		margin-bottom:0 !important;
+	}
+}
