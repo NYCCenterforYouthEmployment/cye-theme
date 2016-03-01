@@ -20,8 +20,8 @@
       init: function() {
         // JavaScript to be fired on all pages
 		
-		$('#menulink').click(function(event) {
-			event.preventDefault();
+		
+		function close_nav() {
 			if($('.nav-primary').hasClass('show-menu')) {
 				$('.nav-primary').removeClass('show-menu');
 				$('.nav').hide();
@@ -29,15 +29,23 @@
 				$('#menulink .hamburger-wrapper .hamburger').css({"color": "#333"});
 				$('.home #menulink .hamburger-wrapper .hamburger').css({"color": "#fff"});
 				$('.brand a').css({"color": "#333"});
+				$('body').css({"overflow": "auto"});
 			} else {
 				$('.nav-primary').addClass('show-menu');
 				$('.nav').fadeIn();
 				$('.nav li').addClass('small-padding');
 				$('#menulink .hamburger-wrapper .hamburger').css({"color": "#fff"});
 				$('.brand a').css({"color": "#fff"});
+				$('body').css({"overflow": "hidden"});
 				//$('.nav-supplemental ul li a').css({"color": "#fff", "border-color": "#fff"});
 		   }
+		}
+		
+		$('#menulink').click(function(event) {
+			event.preventDefault();
+			close_nav();
 		});
+		
 		
 		//Sticky footer
         //http://blog.mojotech.com/responsive-dynamic-height-sticky-footers/

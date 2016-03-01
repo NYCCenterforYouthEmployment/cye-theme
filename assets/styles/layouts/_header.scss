@@ -182,7 +182,7 @@ header.banner {
 		list-style: none;
 		transition: all ease .6s;
 		margin: 50px 0;
-		padding-bottom:20px;
+		padding-bottom:10px;
 		
 		&.small-padding {
 			margin: 0;
@@ -195,7 +195,8 @@ header.banner {
 			font-family:$font-header;
 			font-weight:400;
 			text-transform:uppercase;
-			padding:0 10%;
+			margin:0 8%;
+			display:inline-block;
 			
 			
 			-moz-transition: all ease .3s;
