@@ -168,3 +168,17 @@ section.comments,
 .page-template-contact .page-content {
 	width:100% !important;
 }
+
+.doc-container {
+	margin:2em 0;
+	border:1px solid $light-grey;
+	padding:1em;
+	color:$light-grey;
+	.fa {
+		font-size:3em;
+	}
+	h3 {
+		padding:0;
+		margin:0;
+	}
+}

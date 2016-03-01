@@ -77,8 +77,17 @@ function docs_function() {
 			$title = $doc_params['title'];
 			$caption = $doc_params['caption'];
 			
-			$output = '<i class="fa fa-file-text-o"></i>';
-			
+			$output = '<div class="doc-container">';
+				$output .= '<div class="row">';
+					$output .= '<div class="col-xs-2">';
+						$output .= '<i class="fa fa-file-text-o"></i>';
+					$output .= '</div>';
+					$output .= '<div class="col-xs-10">';
+						$output .= '<h3><a href="'.$url.'">'.$title.'</a></h3>';
+						$output .= '<span>'.$caption.'</span>';
+					$output .= '</div>';
+				$output .= '</div>';
+			$output .= '</div>';
 		endforeach;
 	endif;
 	return $output; 
