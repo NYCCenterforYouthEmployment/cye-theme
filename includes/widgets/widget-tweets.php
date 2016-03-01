@@ -294,6 +294,16 @@ class Twitter_Widget extends WP_Widget {
 	private function zilla_username_link($matches) {
 		return '<a href="http://twitter.com/' . $matches[0] . '" target="_blank">' . $matches[0] . '</a>';
 	}
+	
+	/**
+	 * Changes hashtags to links
+	 *
+	 * @param string $text text to be linkified
+	 * @return string linkified text 
+	 */
+	private function zilla_hashtag_link($matches) {
+		return '<a href="http://twitter.com/' . $matches[0] . '" target="_blank">' . $matches[0] . '</a>';
+	}
 	/**
 	 * Changes text to links
 	 *
@@ -312,6 +322,13 @@ class Twitter_Widget extends WP_Widget {
 		$string = preg_replace_callback(
 			'/@([A-Za-z0-9_]{1,15})/', 
 			array(&$this, 'zilla_username_link'), 
+			$string
+		);
+		
+		// link #hashtags
+		$string = preg_replace_callback(
+			'/(?<!\S)#([0-9a-zA-Z]+)/', 
+			array(&$this, 'zilla_hashtag_link'), 
 			$string
 		);
 
