@@ -1,6 +1,6 @@
 <!-- NYC.gov header -->
    <?php 
-  $assets_base = "http://www1.nyc.gov";
+  $assets_base = "https://www1.nyc.gov";
   $url_base = "http://www1.nyc.gov"; ?>
   
   <div class="agency-header" style="background:#000; position:relative; z-index:1520">
