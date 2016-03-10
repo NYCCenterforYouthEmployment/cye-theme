@@ -106,11 +106,11 @@
 		@extend .inline-list;
 		li {
 			border:1px solid $grey;
+			opacity:0.5;
 			a {
-				opacity:0.5;
 				@include transition;
 				&:hover {
-					opacity:1;
+					/*opacity:1;*/
 				}
 			}
 		}
@@ -152,9 +152,10 @@
 		.name {
 			margin-top:1em;
 		}
-		.name, .title {
+		.name, .title, .company-name, .involvement {
 			h2, h3 {
 				margin:0;
+				line-height:22px;
 			}
 		}
 	}

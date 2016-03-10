@@ -80,6 +80,15 @@
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+
+        // Set hover opacity states for partner list images with anchor tags
+        $('.partner-listing li').hover(function(){
+			if ($(this).find('a').length > 0) {
+				$(this).css('opacity', '1');
+			}
+        }, function(){
+			$(this).css('opacity', '0.5');
+		});
       }
     },
     // Home page

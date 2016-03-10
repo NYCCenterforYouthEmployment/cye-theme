@@ -37,6 +37,20 @@
                     echo $testimonial['business_title'];
                     echo "</h3></div>";
                  endif;
+
+                 //company name
+                 if ( !empty( $testimonial['company_name'] )):
+                    echo "<div class=\"company-name\"><h3>";
+                    echo $testimonial['company_name'];
+                    echo "</h3></div>";
+                 endif;
+
+                 //involvement
+                 if ( !empty( $testimonial['involvement'] )):
+                    echo "<div class=\"involvement\"><h3>";
+                    echo $testimonial['involvement'];
+                    echo "</h3></div>";
+                 endif;
                                 
                  //print testimonial
                  if ( !empty( $testimonial['testimonial'] )):
