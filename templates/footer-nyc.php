@@ -2,9 +2,7 @@
    <?php 
   $assets_base = "https://www1.nyc.gov";
   $url_base = "http://www1.nyc.gov"; ?>
-  
-  
-  	<div class="row agency-footer" style="background:#000; position:relative;">
+  <div class="agency-footer">
 		<div class="container">
 			<div class="col col-sm-9 agency-footer-links">
 				<a href="<?php echo $url_base; ?>/nyc-resources/agencies.page">Directory of City Agencies </a>
@@ -26,10 +24,4 @@
 		</div>
 	</div>
   </div>
-  
-  
-  
-  
-  
-
   <!-- END -->
