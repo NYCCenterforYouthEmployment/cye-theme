@@ -4,25 +4,26 @@
        if($partners){
        		shuffle( $partners );
        		foreach($partners as $partner) {
-            	$partner_name = $partner['partner_name'];
-				$partner_status = $partner['partner_status'];
-				$partner_link = $partner['partner_link'];
-				$partner_logo = $partner['partner_logo'];
 				//print if logo exists and this is a founding partner
 				if( !empty($partner_logo) ):
                 	if ( is_page_template( 'home.php' ) ):
 						if ( $partner_status ):
-							print_partner();
+							print_partner($partner);
 						endif;
 					else :
-						print_partner();
+						print_partner($partner);
 					endif;
 					
                 endif;
 			}
 		}
 		
-		function print_partner() {
+		function print_partner($partner) {
+			$partner_name = $partner['partner_name'];
+			$partner_status = $partner['partner_status'];
+			$partner_link = $partner['partner_link'];
+			$partner_logo = $partner['partner_logo'];
+				
 			$url = $partner_logo['url'];
             $title = $partner_logo['title'];
             $alt = $partner_logo['alt'];
