@@ -1,5 +1,5 @@
 <div class="testimonials">
-	 <?php 
+	 <?php
         $testimonials = get_field('testimonials',$testimonials_page_id);
         if($testimonials){
             shuffle( $testimonials );
@@ -7,6 +7,9 @@
                 $testimonial_headshot = $testimonial['headshot'];
                
 				echo "<div class=\"item\">";
+				if ( is_page_template( 'home.php' ) ) {
+                    echo '<h2>Testimonials</h2>';
+                 }
 				if( !empty($testimonial_headshot) ):
                     $url = $testimonial_headshot['url'];
                     $title = $testimonial_headshot['title'];
