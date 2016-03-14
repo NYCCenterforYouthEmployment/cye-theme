@@ -1,4 +1,5 @@
-<div class="container-full partners partners-footer">
+<footer class="content-info">
+  <div class="container-full partners partners-footer">
 	<div class="container">
         <div class="row clearfix">
         	<div class="col-md-12">
@@ -12,9 +13,8 @@
        
         </div>
     </div>
-</div>
-<footer class="content-info">
-  <div class="container">
+  </div>
+  <div class="container cye-footer">
   	<div class="row">
     	<div class="col-md-8">
 			<?php dynamic_sidebar('sidebar-footer'); ?>

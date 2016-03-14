@@ -6,7 +6,7 @@ footer.content-info {
   	clear: both;
   
 	background:$footer-grey;
-	padding-top:60px;
+	/*padding-top:60px;*/
 	/*padding-bottom:60px;*/
 	font-size:14px;
 	
@@ -37,6 +37,11 @@ footer.content-info {
 				}
 			}
 		}
+	}
+	
+	.cye-footer {
+		padding-top:60px;
+		padding-bottom:60px;
 	}
 	.widget_text {
 		color:$light-grey;
