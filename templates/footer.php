@@ -1,19 +1,20 @@
 <footer class="content-info">
-  <div class="container-full partners partners-footer">
-	<div class="container">
-        <div class="row clearfix">
-        	<div class="col-md-12">
-            	<h3><?php _e( 'Our founding partners', 'sage' ); ?></h3>
-				<?php $partners_page_id = '74' ?>
-                <?php include(locate_template('templates/content-partners.php')); ?>
-                <p>
-                    <a href="<?php echo get_post_permalink( $partners_page_id ); ?>"><?php _e( 'See all', 'sage' ); ?></a>
-                </p>
-            </div>
-       
-        </div>
-    </div>
-  </div>
+  <?php if( !is_page_template( 'partners.php' )): ?>
+	  <div class="container-full partners partners-footer">
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12">
+					<h3><?php _e( 'Our founding partners', 'sage' ); ?></h3>
+					<?php $partners_page_id = '74' ?>
+					<?php include(locate_template('templates/content-partners.php')); ?>
+					<p>
+						<a href="<?php echo get_post_permalink( $partners_page_id ); ?>"><?php _e( 'See all', 'sage' ); ?></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	  </div>
+  <?php endif ?>
   <div class="container cye-footer">
   	<div class="row">
     	<div class="col-md-8">
