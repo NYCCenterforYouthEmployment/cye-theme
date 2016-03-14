@@ -9,7 +9,7 @@
 				$partner_link = $partner['partner_link'];
 				$partner_logo = $partner['partner_logo'];
 				//print if logo exists and this is a founding partner
-				if( !empty($partner_logo) && $partner_status ):
+				if( !empty($partner_logo) && $partner_status || is_page_template( 'partners.php' )):
                 	$url = $partner_logo['url'];
                     $title = $partner_logo['title'];
                     $alt = $partner_logo['alt'];
@@ -20,6 +20,7 @@
                     $thumb = $partner_logo['sizes'][ $size ];
                     $width = $partner_logo['sizes'][ $size . '-width' ];
                     $height = $partner_logo['sizes'][ $size . '-height' ];
+					
                     //print logo
 					?>
                     <li>
