@@ -1,4 +1,4 @@
-<div class="container-full partners">
+<div class="container-full partners partners-footer">
 	<div class="container">
         <div class="row clearfix">
         	<div class="col-md-12">
