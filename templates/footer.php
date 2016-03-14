@@ -1,3 +1,18 @@
+<div class="container-full partners">
+	<div class="container">
+        <div class="row clearfix">
+        	<div class="col-md-12">
+            	<h3><?php _e( 'Our founding partners', 'sage' ); ?></h3>
+				<?php $partners_page_id = '74' ?>
+                <?php include(locate_template('templates/content-partners.php')); ?>
+                <p>
+                    <a href="<?php echo get_post_permalink( $partners_page_id ); ?>"><?php _e( 'See all', 'sage' ); ?></a>
+                </p>
+            </div>
+       
+        </div>
+    </div>
+</div>
 <footer class="content-info">
   <div class="container">
   	<div class="row">

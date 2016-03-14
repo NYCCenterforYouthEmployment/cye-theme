@@ -103,6 +103,7 @@
     </div>
 </div>
 
+<!--
 <div class="container-full partners">
 	<div class="container">
         <div class="row clearfix">
@@ -117,5 +118,5 @@
        
         </div>
     </div>
-</div>
+</div>-->
            
