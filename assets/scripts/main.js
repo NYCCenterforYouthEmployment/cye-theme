@@ -53,7 +53,7 @@
           //on homepage add less margin since we have no fixed header there
 		  var margin_offset;
 		  if ($('body').hasClass('home')) {
-			  margin_offset = 110;
+			  margin_offset = 18;
 		  } else {
 			   margin_offset = 200;
 		  }
