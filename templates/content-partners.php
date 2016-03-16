@@ -23,7 +23,7 @@
 	?>
 </ul>
 <?php if($non_founding_partners && is_page_template( 'partners.php' )): ?>
-	<h2>Corporate Sponsors</h2>
+	<h2>Key Funder and Employer Partners</h2>
 	<ul class="partner-listing">
 	  <?php
 		foreach($non_founding_partners as $partner) {
