@@ -123,6 +123,16 @@ function my_login_logo() { ?>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
+function loginpage_custom_link() {
+	return get_site_url();
+}
+add_filter('login_headerurl','loginpage_custom_link');
+
+function change_title_on_logo() {
+	return get_bloginfo();
+}
+add_filter('login_headertitle', 'change_title_on_logo');
+
 //remove WP version from header
 remove_action('wp_head', 'wp_generator');
 
@@ -136,7 +146,7 @@ function hook_meta() {
 	$output='<meta property="og:type" content="blog">';
 	$output.='<meta property="og:site_name" content="'.get_bloginfo("name").'">';
 	//if single post or page, use the content of the post
-	if (is_single()) {
+	if (is_single() || (!is_home() && is_page())) {
 		//check if feartued image is set
 		$featured = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "full" );
 		if( $featured ) {
