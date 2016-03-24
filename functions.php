@@ -139,7 +139,7 @@ remove_action('wp_head', 'wp_generator');
 
 /********************************************
 /* Adding open graph sharing meta tags *****/
-add_action('wp_head','hook_meta');
+/*add_action('wp_head','hook_meta');
 function hook_meta() {
 	global $post;
 	$featured_img_url = get_stylesheet_directory_uri().'/dist/images/cye-on-facebook.jpg';
@@ -165,6 +165,6 @@ function hook_meta() {
 	}
 	
 	echo $output;
-}
+}*/
 
 /* END meta tags ****************************/
